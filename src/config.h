@@ -30,6 +30,9 @@
 // initial pwm fan speed on startup (0 <= value <= 255)
 #define INITIALPWMVALUE            120
 
+// --- Serial Debug output ----------------------------------------------------------------------------------------------------------------------------
+#define useSerial
+
 // --- main settings ----------------------------------------------------------------------------------------------------------------------------
 #define SLOWPWMVALUE 150
 #define MEDIUMPWMVALUE 200
