@@ -1,0 +1,8 @@
+/*
+Any defines from "config.h" in CAPITALS can be overridden in "config_override.h".
+If you add additional overrides here, you have to
+  1. first add #undef
+  2. add new #define
+*/
+#undef SLOWPWMVALUE
+#define SLOWPWMVALUE 20
