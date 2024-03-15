@@ -1,3 +1,5 @@
+![Build](https://github.com/darkrymit/esp32-fan/actions/workflows/build-platformio.yml/badge.svg)
+
 # Project Name
 
 Cooling Fan Controller on ARDUINO/ESP32
