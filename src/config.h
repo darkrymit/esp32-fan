@@ -34,9 +34,15 @@
 #define useSerial
 
 // --- main settings ----------------------------------------------------------------------------------------------------------------------------
-#define SLOWPWMVALUE 150
+#define SLOWPWMVALUE 170
 #define MEDIUMPWMVALUE 200
 #define FASTPWMVALUE 250
+
+// --- Temp sensor ----------------------------------------------------------------------------------------------------------------------------
+
+#define TEMPPIN GPIO_NUM_4
+#define TEMPSENSOR DHT11
+#define TEMPUPDATEFREQ 1000
 
 // --- include override settings from seperate file ---------------------------------------------------------------------------------------------------------------
 #if __has_include("config_local.h")

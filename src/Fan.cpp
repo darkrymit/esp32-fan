@@ -5,41 +5,42 @@
 #include "Fan.h"
 #include "FunctionalInterrupt.h"
 
-Fan::Fan(uint8_t tachoPin, uint32_t tachoUpdateFreq, uint8_t tachoNumberOfPulsesPerRevolution, uint8_t pwmPin, uint8_t pwmChannel, uint8_t pwmResolution, uint32_t pwmFreq, int pwmInitialValue)
+Fan::Fan(uint8_t tacho_pin, uint32_t tacho_update_freq, uint8_t tacho_number_of_pulses_per_revolution, uint8_t pwm_pin, uint8_t pwm_channel, uint8_t pwm_resolution, uint32_t pwm_freq, int pwm_initial_value)
 {
-    this->tachoPin = tachoPin;
-    this->tachoUpdateFreq = tachoUpdateFreq;
-    this->tachoNumberOfPulsesPerRevolution = tachoNumberOfPulsesPerRevolution;
-    this->tachoRPMCounter = 0;
-    this->tachoLastRPMCounter = 0;
-    this->tachoRPMInterruptFunctionRef = std::bind(&Fan::tachoRPMInterruptFunction, this);
+    this->tacho_pin = tacho_pin;
+    this->tacho_update_freq = tacho_update_freq;
+    this->tacho_number_of_pulses_per_revolution = tacho_number_of_pulses_per_revolution;
+    this->tacho_rpm_counter = 0;
+    this->tacho_last_rpm_counter = 0;
+    this->tacho_rpm_interrupt_function_ref = std::bind(&Fan::tachoRPMInterruptFunction, this);
 
-    this->pwmPin = pwmPin;
-    this->pwmChannel = pwmChannel;
-    this->pwmResolution = pwmResolution;
-    this->pwmFreq = pwmFreq;
-    this->pwmInitialValue = pwmInitialValue;
-    this->pwmValue = pwmInitialValue;
+    this->pwm_pin = pwm_pin;
+    this->pwm_channel = pwm_channel;
+    this->pwm_resolution = pwm_resolution;
+    this->pwm_freq = pwm_freq;
+    this->pwm_initial_value = pwm_initial_value;
+    this->pwm_value = pwm_initial_value;
 }
 
 void Fan::init(void)
 {
     // configure Tacho pin
-    digitalWrite(tachoPin, HIGH);
+    digitalWrite(tacho_pin, HIGH);
     // interrupt on falling edge
-    attachInterrupt(digitalPinToInterrupt(tachoPin), tachoRPMInterruptFunctionRef, FALLING);
+    attachInterrupt(digitalPinToInterrupt(tacho_pin), tacho_rpm_interrupt_function_ref, FALLING);
     Log.printf("  Fan tacho detection sucessfully initialized.\r\n");
 
     // configure PWM pin
-    ledcSetup(pwmChannel, pwmFreq, pwmResolution);
+    ledcSetup(pwm_channel, pwm_freq, pwm_resolution);
     // attach the channel to the GPIO to be controlled
-    ledcAttachPin(pwmPin, pwmChannel);
-    pwmValue = pwmInitialValue;
+    ledcAttachPin(pwm_pin, pwm_channel);
+    pwm_value = pwm_initial_value;
     Log.printf("  Fan PWM sucessfully initialized.\r\n");
 
     // configure timer
-    timer.every(tachoUpdateFreq, std::bind(&Fan::tachoProcessRPM, this));
+    timer.every(tacho_update_freq, std::bind(&Fan::tachoProcessRPM, this));
 }
+
 void Fan::update(void)
 {
     timer.tick();
@@ -47,64 +48,63 @@ void Fan::update(void)
 
 uint32_t Fan::getTachoUpdateFreq(void)
 {
-    return tachoUpdateFreq;
+    return tacho_update_freq;
 }
 
 uint8_t Fan::getTachoNumberOfPulsesPerRevolution(void)
 {
-    return tachoNumberOfPulsesPerRevolution;
+    return tacho_number_of_pulses_per_revolution;
 }
 
 int Fan::getRPM(void)
 {
-    return tachoLastRPMCounter;
+    return tacho_last_rpm_counter;
 }
 
 void Fan::tachoRPMInterruptFunction()
 {
-    tachoRPMCounter++;
+    tacho_rpm_counter++;
 }
 
 bool Fan::tachoProcessRPM(void)
 {
-
     // detach interrupt while calculating rpm
-    detachInterrupt(digitalPinToInterrupt(tachoPin));
+    detachInterrupt(digitalPinToInterrupt(tacho_pin));
 
     // calculate rpm
-    tachoLastRPMCounter = tachoRPMCounter * ((float)60 / (float)tachoNumberOfPulsesPerRevolution) * ((float)1000 / (float)tachoUpdateFreq);
+    tacho_last_rpm_counter = tacho_rpm_counter * ((float)60 / (float)tacho_number_of_pulses_per_revolution) * ((float)1000 / (float)tacho_update_freq);
 
     // reset counter
-    tachoRPMCounter = 0;
+    tacho_rpm_counter = 0;
 
     // attach interrupt again
-    attachInterrupt(digitalPinToInterrupt(tachoPin), tachoRPMInterruptFunctionRef, FALLING);
+    attachInterrupt(digitalPinToInterrupt(tacho_pin), tacho_rpm_interrupt_function_ref, FALLING);
 
     return true;
 }
 
-void Fan::setPWMValue(int pwmValue)
+void Fan::setPWMValue(int pwm_value)
 {
-    this->pwmValue = min(max(pwmValue, 0), (int)pow(2, pwmResolution) - 1);
-    ledcWrite(pwmChannel, this->pwmValue);
+    this->pwm_value = min(max(pwm_value, 0), (int)pow(2, pwm_resolution) - 1);
+    ledcWrite(pwm_channel, this->pwm_value);
 }
 
 int Fan::getPWMValue(void)
 {
-    return pwmValue;
+    return pwm_value;
 }
 
 uint8_t Fan::getPWMChannel(void)
 {
-    return pwmChannel;
+    return pwm_channel;
 }
 
 uint8_t Fan::getPWMResolution(void)
 {
-    return pwmResolution;
+    return pwm_resolution;
 }
 
 uint32_t Fan::getPWMFreq(void)
 {
-    return pwmFreq;
+    return pwm_freq;
 }
