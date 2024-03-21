@@ -1,0 +1,141 @@
+ *  Executing task: C:\Users\DarkRymit\.platformio\penv\Scripts\platformio.exe device monitor 
+
+--- Terminal on COM3 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+ (SPI_FAST_F
+32 ms: Setting things up ...
+33 ms:   Fan tacho detection sucessfully initialized.
+34 ms:   Fan PWM sucessfully initialized.
+1035 ms:   Temperature sensor sucessfully initialized.
+1035 ms: Settings done. Have fun.
+2060 ms: fan rpm = 3600, fan pwm = 170, temp = 26.000000, mode = 0
+3060 ms: fan rpm = 3630, fan pwm = 170, temp = 26.000000, mode = 0
+4060 ms: fan rpm = 3690, fan pwm = 170, temp = 26.000000, mode = 0
+5060 ms: fan rpm = 3630, fan pwm = 170, temp = 26.000000, mode = 0
+6060 ms: fan rpm = 3630, fan pwm = 170, temp = 26.000000, mode = 0
+7060 ms: fan rpm = 3600, fan pwm = 170, temp = 26.000000, mode = 0
+8060 ms: fan rpm = 3630, fan pwm = 170, temp = 26.000000, mode = 0
+9060 ms: fan rpm = 3600, fan pwm = 170, temp = 26.000000, mode = 0
+10060 ms: fan rpm = 3780, fan pwm = 170, temp = 26.000000, mode = 0
+11035 ms: Mode not changed. Still 0
+11060 ms: fan rpm = 4080, fan pwm = 170, temp = 26.000000, mode = 0
+12060 ms: fan rpm = 3990, fan pwm = 170, temp = nan, mode = 0
+13060 ms: fan rpm = 4140, fan pwm = 170, temp = nan, mode = 0
+14060 ms: fan rpm = 3690, fan pwm = 170, temp = 30.600000, mode = 0
+15060 ms: fan rpm = 3660, fan pwm = 170, temp = 30.600000, mode = 0
+16060 ms: fan rpm = 3780, fan pwm = 170, temp = 30.600000, mode = 0
+17060 ms: fan rpm = 3750, fan pwm = 170, temp = 30.600000, mode = 0
+18060 ms: fan rpm = 3750, fan pwm = 170, temp = 30.900000, mode = 0
+19060 ms: fan rpm = 4020, fan pwm = 170, temp = 30.900000, mode = 0
+20060 ms: fan rpm = 3870, fan pwm = 170, temp = 32.099998, mode = 0
+21035 ms: Mode changed to 1
+21060 ms: fan rpm = 3690, fan pwm = 200, temp = 32.099998, mode = 1
+22060 ms: fan rpm = 3840, fan pwm = 200, temp = 35.799999, mode = 1
+23060 ms: fan rpm = 3930, fan pwm = 200, temp = 35.799999, mode = 1
+24060 ms: fan rpm = 3960, fan pwm = 200, temp = 40.299999, mode = 1
+25060 ms: fan rpm = 3990, fan pwm = 200, temp = 40.299999, mode = 1
+26060 ms: fan rpm = 3960, fan pwm = 200, temp = 44.500000, mode = 1
+27060 ms: fan rpm = 4050, fan pwm = 200, temp = 44.500000, mode = 1
+28060 ms: fan rpm = 3810, fan pwm = 200, temp = 47.900002, mode = 1
+29060 ms: fan rpm = 3630, fan pwm = 200, temp = 47.900002, mode = 1
+30060 ms: fan rpm = 3660, fan pwm = 200, temp = 48.599998, mode = 1
+31035 ms: Mode changed to 2
+31060 ms: fan rpm = 3600, fan pwm = 250, temp = 48.599998, mode = 2
+32060 ms: fan rpm = 3990, fan pwm = 250, temp = 48.700001, mode = 2
+33060 ms: fan rpm = 4170, fan pwm = 250, temp = 48.700001, mode = 2
+34060 ms: fan rpm = 4110, fan pwm = 250, temp = 48.700001, mode = 2
+35060 ms: fan rpm = 4170, fan pwm = 250, temp = 48.700001, mode = 2
+36060 ms: fan rpm = 4170, fan pwm = 250, temp = 48.599998, mode = 2
+37060 ms: fan rpm = 4080, fan pwm = 250, temp = 48.599998, mode = 2
+38060 ms: fan rpm = 4170, fan pwm = 250, temp = 48.299999, mode = 2
+39060 ms: fan rpm = 4140, fan pwm = 250, temp = 48.299999, mode = 2
+40060 ms: fan rpm = 4110, fan pwm = 250, temp = 47.400002, mode = 2
+41035 ms: Mode not changed. Still 2
+41060 ms: fan rpm = 4080, fan pwm = 250, temp = 47.400002, mode = 2
+42060 ms: fan rpm = 4140, fan pwm = 250, temp = 46.099998, mode = 2
+43060 ms: fan rpm = 4440, fan pwm = 250, temp = 46.099998, mode = 2
+44060 ms: fan rpm = 4530, fan pwm = 250, temp = 44.299999, mode = 2
+45060 ms: fan rpm = 4500, fan pwm = 250, temp = 44.299999, mode = 2
+46060 ms: fan rpm = 4290, fan pwm = 250, temp = 42.400002, mode = 2
+47060 ms: fan rpm = 4170, fan pwm = 250, temp = 42.400002, mode = 2
+48060 ms: fan rpm = 4140, fan pwm = 250, temp = 40.799999, mode = 2
+49060 ms: fan rpm = 4170, fan pwm = 250, temp = 40.799999, mode = 2
+50060 ms: fan rpm = 4260, fan pwm = 250, temp = 39.500000, mode = 2
+51035 ms: Mode changed to 1
+51060 ms: fan rpm = 4140, fan pwm = 200, temp = 39.500000, mode = 1
+52060 ms: fan rpm = 3870, fan pwm = 200, temp = 38.700001, mode = 1
+53060 ms: fan rpm = 3660, fan pwm = 200, temp = 38.700001, mode = 1
+54060 ms: fan rpm = 3690, fan pwm = 200, temp = 38.000000, mode = 1
+55060 ms: fan rpm = 3810, fan pwm = 200, temp = 38.000000, mode = 1
+56060 ms: fan rpm = 3660, fan pwm = 200, temp = 37.500000, mode = 1
+57060 ms: fan rpm = 3660, fan pwm = 200, temp = 37.500000, mode = 1
+58060 ms: fan rpm = 3690, fan pwm = 200, temp = 37.000000, mode = 1
+59060 ms: fan rpm = 3630, fan pwm = 200, temp = 37.000000, mode = 1
+60060 ms: fan rpm = 3720, fan pwm = 200, temp = 36.599998, mode = 1
+61035 ms: Mode not changed. Still 1
+61060 ms: fan rpm = 3630, fan pwm = 200, temp = 36.599998, mode = 1
+62060 ms: fan rpm = 3690, fan pwm = 200, temp = 36.200001, mode = 1
+63060 ms: fan rpm = 3690, fan pwm = 200, temp = 36.200001, mode = 1
+64060 ms: fan rpm = 3690, fan pwm = 200, temp = 35.900002, mode = 1
+65060 ms: fan rpm = 3750, fan pwm = 200, temp = 35.900002, mode = 1
+66060 ms: fan rpm = 3660, fan pwm = 200, temp = 35.500000, mode = 1
+67060 ms: fan rpm = 3720, fan pwm = 200, temp = 35.500000, mode = 1
+68060 ms: fan rpm = 3660, fan pwm = 200, temp = 35.200001, mode = 1
+69060 ms: fan rpm = 3690, fan pwm = 200, temp = 35.200001, mode = 1
+70060 ms: fan rpm = 3720, fan pwm = 200, temp = 34.900002, mode = 1
+71035 ms: Mode not changed. Still 1
+71060 ms: fan rpm = 3630, fan pwm = 200, temp = 34.900002, mode = 1
+72060 ms: fan rpm = 3720, fan pwm = 200, temp = 34.700001, mode = 1
+73060 ms: fan rpm = 3690, fan pwm = 200, temp = 34.700001, mode = 1
+74060 ms: fan rpm = 3690, fan pwm = 200, temp = 34.400002, mode = 1
+75060 ms: fan rpm = 3780, fan pwm = 200, temp = 34.400002, mode = 1
+76060 ms: fan rpm = 3660, fan pwm = 200, temp = 34.200001, mode = 1
+77060 ms: fan rpm = 3660, fan pwm = 200, temp = 34.200001, mode = 1
+78060 ms: fan rpm = 3780, fan pwm = 200, temp = 33.900002, mode = 1
+79060 ms: fan rpm = 3720, fan pwm = 200, temp = 33.900002, mode = 1
+80060 ms: fan rpm = 3750, fan pwm = 200, temp = 33.700001, mode = 1
+81035 ms: Mode not changed. Still 1
+81060 ms: fan rpm = 3780, fan pwm = 200, temp = 33.700001, mode = 1
+82060 ms: fan rpm = 3750, fan pwm = 200, temp = 33.500000, mode = 1
+83060 ms: fan rpm = 3690, fan pwm = 200, temp = 33.500000, mode = 1
+84060 ms: fan rpm = 3660, fan pwm = 200, temp = 33.299999, mode = 1
+85060 ms: fan rpm = 3660, fan pwm = 200, temp = 33.299999, mode = 1
+86060 ms: fan rpm = 3600, fan pwm = 200, temp = 33.099998, mode = 1
+87060 ms: fan rpm = 3690, fan pwm = 200, temp = 33.099998, mode = 1
+88060 ms: fan rpm = 3660, fan pwm = 200, temp = 32.900002, mode = 1
+89060 ms: fan rpm = 3630, fan pwm = 200, temp = 32.900002, mode = 1
+90060 ms: fan rpm = 3720, fan pwm = 200, temp = 32.500000, mode = 1
+91035 ms: Mode not changed. Still 1
+91060 ms: fan rpm = 3690, fan pwm = 200, temp = 32.500000, mode = 1
+92060 ms: fan rpm = 3660, fan pwm = 200, temp = 32.000000, mode = 1
+93060 ms: fan rpm = 3630, fan pwm = 200, temp = 32.000000, mode = 1
+94060 ms: fan rpm = 3630, fan pwm = 200, temp = 31.400000, mode = 1
+95060 ms: fan rpm = 3630, fan pwm = 200, temp = 31.400000, mode = 1
+96060 ms: fan rpm = 3600, fan pwm = 200, temp = 30.600000, mode = 1
+97060 ms: fan rpm = 3570, fan pwm = 200, temp = 30.600000, mode = 1
+98060 ms: fan rpm = 3660, fan pwm = 200, temp = 29.900000, mode = 1
+99060 ms: fan rpm = 3690, fan pwm = 200, temp = 29.900000, mode = 1
+100060 ms: fan rpm = 3630, fan pwm = 200, temp = 29.299999, mode = 1
+101035 ms: Mode changed to 0
+101060 ms: fan rpm = 3630, fan pwm = 170, temp = 29.299999, mode = 0
+102060 ms: fan rpm = 3540, fan pwm = 170, temp = 28.900000, mode = 0
+103060 ms: fan rpm = 3330, fan pwm = 170, temp = 28.900000, mode = 0
+104060 ms: fan rpm = 3360, fan pwm = 170, temp = 28.600000, mode = 0
+105060 ms: fan rpm = 3390, fan pwm = 170, temp = 28.600000, mode = 0
+106060 ms: fan rpm = 3450, fan pwm = 170, temp = 28.400000, mode = 0
+107060 ms: fan rpm = 3420, fan pwm = 170, temp = 28.400000, mode = 0
+108060 ms: fan rpm = 3480, fan pwm = 170, temp = 28.299999, mode = 0
+109060 ms: fan rpm = 3450, fan pwm = 170, temp = 28.299999, mode = 0
+110060 ms: fan rpm = 3450, fan pwm = 170, temp = 28.200001, mode = 0
+111035 ms: Mode not changed. Still 0
+111060 ms: fan rpm = 3450, fan pwm = 170, temp = 28.200001, mode = 0
+112060 ms: fan rpm = 3390, fan pwm = 170, temp = 28.100000, mode = 0
+113060 ms: fan rpm = 3450, fan pwm = 170, temp = 28.100000, mode = 0
+114060 ms: fan rpm = 3360, fan pwm = 170, temp = 28.000000, mode = 0
+115060 ms: fan rpm = 3360, fan pwm = 170, temp = 28.000000, mode = 0
+116060 ms: fan rpm = 3450, fan pwm = 170, temp = 28.000000, mode = 0
+117060 ms: fan rpm = 3360, fan pwm = 170, temp = 28.000000, mode = 0
+118060 ms: fan rpm = 3390, fan pwm = 170, temp = 27.900000, mode = 0
+119060 ms: fan rpm = 3420, fan pwm = 170, temp = 27.900000, mode = 0

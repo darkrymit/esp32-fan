@@ -8,11 +8,15 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Images](#images)
 
 ## Description
 
-This project is a cooling fan controller built on the ARDUINO/ESP32 platform. It allows you to control the speed of a cooling fan based on temperature readings from a sensor. The fan speed is adjusted dynamically to maintain a desired temperature range. Fan speed is controlled using PWM (Pulse Width Modulation) signals, and the temperature sensor is connected to an analog input pin. The project is built using the Arduino framework but uses the ESP32 microcontroller for its advanced features and capabilities. The project can be simulated and tested using the Wokwi simulator.
+This project is a cooling fan controller built on the ARDUINO/ESP32 platform. 
+
+It allows you to control the speed of a cooling fan based on temperature readings from a sensor. The fan speed is adjusted dynamically to maintain a desired temperature range. Fan speed is controlled using PWM (Pulse Width Modulation) signals, and the temperature sensor is connected to an analog input pin. 
+
+The project is built using the Arduino framework but uses the ESP32 microcontroller for its advanced features and capabilities. The project can be simulated and tested using the Wokwi simulator.
 
 
 ## Features
@@ -42,7 +46,7 @@ Required hardware for the project:
 |-----------|-----------|-----------|
 | Microcontroller | ESP32 | Any ESP32 microcontroller will work |
 | Cooling Fan | - 5v/12v PWM Fan (e.g. 4pin PC or Laptop fan) <br> - 5v/12v Power Supply <br> - 10 kΩ Resistor | You need 10 kΩ pull-up resistor for Tachometer signal. You need external power supply for the fan.|
-| Temperature Sensor | TODO: Add details |  |
+| Temperature Sensor | DH11 | Can be replaced with any other temperature sensor but you need to modify the code if not using DH11/DHT22 |
 | Prototyping Accessories (Optional) | Breadboard, Jumper Wires, etc. |  |
 
 ## Installation
