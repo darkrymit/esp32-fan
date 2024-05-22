@@ -70,7 +70,7 @@ The system operates in real-time, with minimal latency in adjusting fan speed ba
 The temperature sensor allows users to monitor system status through serial output.
 
 # Sequence Diagrams
-
+```plantuml
 @startuml
 actor User
 participant "ESP32" as ESP32
@@ -86,7 +86,7 @@ Fan -> ESP32: Speed Adjusted
 ESP32 -> Serial: Display Temperature and Fan Speed
 Serial -> User: Display Temperature and Fan Speed
 @enduml
-
+```
 # Data Structures
 
 | Structure | Description |
